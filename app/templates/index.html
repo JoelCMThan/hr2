@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to the HR Complaint System</h1>
+    <p class="lead">Submit and manage complaints with ease.</p>
+    <hr class="my-4">
+    <p>New here? Register to get started.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('auth.register') }}" role="button">Register</a>
+</div>
+{% endblock %}

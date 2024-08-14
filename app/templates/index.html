@@ -1,13 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Welcome to HR Complaint System{% endblock %}
 
 {% block content %}
 <div class="jumbotron">
     <h1 class="display-4">Welcome to the HR Complaint System</h1>
-    <p class="lead">Submit and manage complaints with ease.</p>
+    <p class="lead">This is the system where you can manage and submit your complaints.</p>
+    {% if not current_user.is_authenticated %}
     <hr class="my-4">
-    <p>New here? Register to get started.</p>
-    <a class="btn btn-primary btn-lg" href="{{ url_for('auth.register') }}" role="button">Register</a>
+    <p>If you have an account, please log in. If not, register to create one.</p>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('auth.login') }}" role="button">Login</a>
+    <a class="btn btn-success btn-lg" href="{{ url_for('auth.register') }}" role="button">Register</a>
+    {% else %}
+    <p>You are logged in. Go to your <a href="{{ url_for('employee.dashboard') }}">Dashboard</a>.</p>
+    {% endif %}
 </div>
 {% endblock %}

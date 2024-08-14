@@ -3,12 +3,23 @@ body {
     background-color: #f8f9fa;
 }
 
-.navbar {
-    margin-bottom: 20px;
+.sidebar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 20px;
 }
 
-.container {
-    max-width: 1200px;
+.container-fluid {
+    margin-left: 200px;
+    padding-top: 20px;
+}
+
+.nav-link.active {
+    color: #007bff;
+    font-weight: bold;
 }
 
 /* Custom button styles */
@@ -20,16 +31,6 @@ body {
 .btn-primary:hover {
     background-color: #0056b3;
     border-color: #0056b3;
-}
-
-/* Custom card styles */
-.card {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Forms */
-.form-control {
-    border-radius: 0.25rem;
 }
 
 /* Custom alert styles */
